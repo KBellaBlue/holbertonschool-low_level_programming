@@ -3,11 +3,11 @@
 #include <time.h>
 #include "main.h"
 /**
- * print_alphabet - print the alphabet
+ * print_alphabet - print the alphabet ten times
  *
  * Return: Always success
  */
-void print_alphabet(void)
+void print_alphabet_x10(void)
 {
 	char alphabet;
 	int n;
