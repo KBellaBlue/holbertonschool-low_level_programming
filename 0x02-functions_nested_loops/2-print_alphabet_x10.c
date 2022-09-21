@@ -3,17 +3,21 @@
 #include <time.h>
 #include "main.h"
 /**
- * print_alphabet - print the alphabet 10 times
+ * print_alphabet - print the alphabet
  *
  * Return: Always success
  */
-void print_alphabet_x10(void)
+void print_alphabet(void)
 {
-	int c;
+	char alphabet;
+	int n;
 
-	for (c = 0; c < 10; c++)
+	for (n = 0; n < 10; n++)
 	{
-		print_alphabet();
+		for (alphabet = 'a'; alphabet <= 'z'; alphabet++)
+		{
+			_putchar(alphabet);
+		}
 	}
 
 	_putchar('\n');
