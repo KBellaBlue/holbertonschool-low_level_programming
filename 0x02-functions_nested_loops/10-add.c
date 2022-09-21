@@ -12,8 +12,5 @@
  */
 int add(int x, int y)
 {
-	int x;
-	int y;
-
 	return x + y;
 }
