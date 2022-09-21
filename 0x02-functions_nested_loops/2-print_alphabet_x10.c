@@ -3,7 +3,7 @@
 #include <time.h>
 #include "main.h"
 /**
- * print_alphabet - print the alphabet ten times
+ * print_alphabet_x10 - print the alphabet ten times
  *
  * Return: Always success
  */
@@ -18,8 +18,7 @@ void print_alphabet_x10(void)
 		{
 			_putchar(alphabet);
 		}
+		_putchar('\n);
 	}
-
-	_putchar('\n');
 
 }
