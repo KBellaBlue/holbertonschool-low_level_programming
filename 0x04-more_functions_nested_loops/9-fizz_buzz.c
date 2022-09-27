@@ -3,9 +3,9 @@
 #include <time.h>
 #include "main.h"
 /**
- * fizz_buzz - print numbers 1 to 100 but replace multiples of 3 with Fizz, 5 with Buzz, and 15 with FizzBuzz
+ * fizz_buzz - print numbers 1 to 100 but
+ * replace multiples of 3 with Fizz, 5 with Buzz, and 15 with FizzBuzz
  *
- * @n: the size of the square
  *
  * Return: void
  */
