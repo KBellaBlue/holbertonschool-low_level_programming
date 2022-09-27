@@ -34,9 +34,9 @@ int main(void)
 		{
 			printf("%d", i);
 		}
-		_putchar(' ');
+		putchar(' ');
 	}
 	printf("Buzz");
-	_putchar('\n');
+	putchar('\n');
 	return (0);
 }
