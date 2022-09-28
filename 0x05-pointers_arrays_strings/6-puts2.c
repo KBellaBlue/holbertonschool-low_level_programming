@@ -3,13 +3,13 @@
 #include <time.h>
 #include "main.h"
 /**
- * _puts2 - print every other character of a string
+ * puts2 - print every other character of a string
  *
  * @str:the string
  *
  * Return: void
  */
-void puts2(char *str)
+void _puts2(char *str)
 {
 	int i;
 
