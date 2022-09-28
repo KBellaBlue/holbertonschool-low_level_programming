@@ -3,28 +3,21 @@
 #include <time.h>
 #include "main.h"
 /**
- * print_array - print a certain number of elements of an array
+ * *_strcpy - copies the string from one pointer to another
  *
- * @a: the array
- * @n: the number of elements to print
+ * @dest: the destination
+ * @src: the source string
  *
- * Return: void
+ * Return: string
  */
-void print_array(int *a, int n)
+char *_strcpy(char *dest, char *src)
 {
-	int i;
+	int i = 0;
 
-	for (i = 0; i < n; i++)
+	for (i = 0; src[i] != '\0'; i++)
 	{
-		if (i == (n - 1))
-		{
-			printf("%d", a[n - 1]);
-		}
-		else
-		{
-			printf("%d, ", a[i]);
-		}
+		dest[i] = src[i];
 	}
 
-	_putchar('\n');
+	return (dest);
 }
