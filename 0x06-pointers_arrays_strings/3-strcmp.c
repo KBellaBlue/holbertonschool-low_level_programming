@@ -3,14 +3,14 @@
 #include <time.h>
 #include "holberton.h"
 /**
- * _strcpm - compare strings
+ * _strcmp - compare strings
  *
  * @s1: first string
  * @s2: second string
  *
  * Return: 0 if matching otherwise difference
  */
-int _strcpm(char *s1, char *s2)
+int _strcmp(char *s1, char *s2)
 {
 	int i;
 
