@@ -5,7 +5,7 @@
 /**
  * *_memset - fill the memory with a constant byte
  *
- * @s: the string 
+ * @s: the string
  * @b: the constant
  * @n: the number of bytes
  *
