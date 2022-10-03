@@ -13,7 +13,7 @@ char *leet(char *s)
 {
 	int i, p;
 	char alphabet[] = "aAeEoOtTlL";
-	char leet[] = "4433007711"
+	char leet[] = "4433007711";
 
 	for (i = 0; *(s + i); i++)
 	{
@@ -21,7 +21,7 @@ char *leet(char *s)
 		{
 			if (alphabet[p] == s[i])
 			{
-				s[i] = b[p];
+				s[i] = leet[p];
 			}
 		}
 	}
