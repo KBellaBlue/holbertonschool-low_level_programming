@@ -19,13 +19,14 @@ void print_diagsums(int *a, int size)
 	for (i = 0; i < size; i++)
 	{
 		h = (i * size) + i;
-		p += *(h + a);
+		p += *(a + h);
 	}
+
 	for (i = 0; i < size; i++)
 	{
 		h = (i * size) + (size - 1 - i);
-		d += *(h + p);
+		d += *(a + h);
 	}
 
-	printf("%i, %i\n", p, d;
+	printf("%i, %i\n", p, d);
 }
