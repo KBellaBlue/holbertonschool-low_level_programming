@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * p2 - 
+ * p2 - checks for prime number
  *
  * @n: the number
  * @i: prime number
@@ -27,7 +27,7 @@ int p2(int n, int i)
  * Return: 1 if prime number otherwise 0
  */
 int is_prime_number(int n)
-{i
+{
 	if (n <= 1)
 	{
 		return (0);
