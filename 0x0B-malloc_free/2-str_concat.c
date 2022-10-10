@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "main.h"
 /**
- * _str_concat - return pointer to combined string
+ * str_concat - return pointer to combined string
  *
  * @s1: first string
  * @s2: second string
