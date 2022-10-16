@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "holberton.h"
+#include "main.h"
 /**
  * *_strpbrk - searches a string for any set of a set of bytes
  *

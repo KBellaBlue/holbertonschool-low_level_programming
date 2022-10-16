@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include "holberton.h"
+#include "main.h"
 /**
  * _isupper - checks for uppercase
  *

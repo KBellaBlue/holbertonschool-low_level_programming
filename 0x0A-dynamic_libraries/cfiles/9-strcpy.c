@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include "holberton.h"
+#include "main.h"
 /**
  * *_strcpy - copies the string from one pointer to another
  *
