@@ -12,7 +12,7 @@
  *
  **/
 
-char *_calloc(char *s1, char *s2, unsigned int n)
+void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	void *array = NULL;
 	unsigned int i, p;
