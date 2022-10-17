@@ -16,19 +16,22 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	unsigned int i, p, a;
-	char *newstr;
+	char *newstr, *dummy;
 
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
 
+	dummy = malloc(5);
+	free(dummy);
+
 	for (i = 0; s1[i] != '\0'; i++)
 		;
 	for (p = 0; s2[p] != '\0'; p++)
 		;
 
-	if (n < p)
+	if (p > n)
 		p = n;
 
 	newstr = malloc((i + p + 1) * sizeof(char));
