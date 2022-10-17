@@ -14,7 +14,7 @@
 
 int *array_range(int min, int max)
 {
-	void *array = NULL;
+	int *array = NULL;
 	int i, p, a;
 
 	a = 0;
