@@ -3,6 +3,26 @@
 #include <stdlib.h>
 
 /**
+ *  * _strlen - returns the lenght of a string
+ *   * @s: pointer to s
+ *    *
+ *     * Return: 0 on success
+ *      *
+ *       */
+int _strlen(char *s)
+{
+
+	int count = 0;
+
+	if (s != '\0')
+	{
+		while (*(s + count) != '\0')
+			count++;
+	}
+	return (count);
+}
+
+/**
  * _strcpy - copies the string with \0 to the buffer
  * @dest: pointer to dest
  * @src: pointer to string
@@ -35,6 +55,7 @@ char *_strcpy(char *dest, char *src)
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
+	int name_size, owner_size;
 	dog_t *newdog;
 
 	newdog = malloc(sizeof(dog_t));
@@ -42,18 +63,23 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (newdog == NULL)
 		return (NULL);
 
-	if (name == NULL)
+	name_size = _strlen(name);
+	newdog->name = malloc(sizeof(char) * (name_size + 1));
+	if (newdog->name == NULL)
 	{
 		free(newdog);
-		free(owner);
 		return (NULL);
 	}
+
+	owner_size = _strlen(owner);
+	newdog->owner = malloc(sizeof(char) * (owner_size +1));;
 	if (owner == NULL)
 	{
+		free(newdog->name);
 		free(newdog);
-		free(name);
 		return (NULL);
 	}
+
 	newdog->name = _strcpy(newdog->name, name);
 	newdog->age = age;
 	newdog->owner = _strcpy(newdog->owner, owner);
