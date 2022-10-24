@@ -8,9 +8,9 @@
  * @size: size of array
  * @cmp: compare function
  *
- * Return: index of first element and -1 for no matches or if size is zero or less
+ * Return: index of first element and -1 for no matches / size is 0
  */
-void array_iterator(int *array, size_t size, void (*cmp)(int))
+int int_index(int *array, int size, void (*cmp)(int))
 {
 	unsigned int i;
 
@@ -18,12 +18,12 @@ void array_iterator(int *array, size_t size, void (*cmp)(int))
 	{
 		for (i = 0; i < size; i++)
 		{
-			if(cmp(array[i] != 0))
+			if (cmp(array[i] != 0))
 			{
-				return i;
+				return (i);
 			}
 		}
 	}
 
-	return -1;
+	return (-1);
 }
