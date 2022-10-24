@@ -3,12 +3,12 @@
 #include <stdlib.h>
 
 /**
- *  * _strlen - returns the lenght of a string
- *   * @s: pointer to s
- *    *
- *     * Return: 0 on success
- *      *
- *       */
+ * _strlen - returns the lenght of a string
+ * @s: pointer to s
+ *
+ * Return: 0 on success
+ *
+ **/
 int _strlen(char *s)
 {
 
@@ -72,7 +72,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	}
 
 	owner_size = _strlen(owner);
-	newdog->owner = malloc(sizeof(char) * (owner_size +1));;
+	newdog->owner = malloc(sizeof(char) * (owner_size + 1));
 	if (owner == NULL)
 	{
 		free(newdog->name);
