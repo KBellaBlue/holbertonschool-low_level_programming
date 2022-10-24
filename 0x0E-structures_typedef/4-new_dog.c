@@ -1,8 +1,29 @@
 #include <stdio.h>
 #include "dog.h"
 #include <stdlib.h>
-#include<string.h>
 
+/**
+ * _strcpy - copies the string with \0 to the buffer
+ * @dest: pointer to dest
+ * @src: pointer to string
+ *
+ * Return: the pointer to dest
+ *
+ **/
+char *_strcpy(char *dest, char *src)
+{
+	int i;
+
+	i = 0;
+
+	while (*(src + i) != '\0')
+	{
+		*(dest + i) = *(src + i);
+		i++;
+	}
+	*(dest + i) = '\0';
+	return (dest);
+}
 /**
  * new_dog - create a  dog
  *
@@ -33,9 +54,9 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(name);
 		return (NULL);
 	}
-	newdog->name = strcpy(newdog->name, name);
+	newdog->name = _strcpy(newdog->name, name);
 	newdog->age = age;
-	newdog->owner = strcpy(newdog->owner, owner);
+	newdog->owner = _strcpy(newdog->owner, owner);
 
 	return (newdog);
 }
