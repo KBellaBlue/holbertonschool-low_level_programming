@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
 	i = atoi(argv[1]);
 	p = atoi(argv[3]);
 
-	if ((argc[2][0] == '/' || argv[2][0] == '%') && p == 0)
+	if ((argv[2][0] == '/' || argv[2][0] == '%') && p == 0)
 	{
 		printf("Error\n");
 		exit(100);
@@ -47,7 +47,7 @@ int main(int argc, char *argv[])
 			printf("%d\n", a);
 			break;
 		default:
-			printf("Error\n);
+			printf("Error\n");
 			exit(99);
 	}
 	return (0);
