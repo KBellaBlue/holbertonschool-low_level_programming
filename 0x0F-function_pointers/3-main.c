@@ -26,23 +26,29 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(98);
 	}
-	if (argv[2][0] != '+' && argv[2][0] != '-' && argv[2][0] != '*'
-			&& argv[2][0] != '/' && argv[2][0] != '%')
+	
+	i = atoi(argv[1]);
+	p = atoi(argv[3]);
+
+	if((argc[2][0] == '/' || argv[2][0] == '%') && p == 0)
 	{
 		printf("Error\n");
-		exit(99);
+		exit(100);
 	}
-	if (argv[2][1] == '\0')
+
+	switch (argv[2][0])
 	{
-		i = atoi(argv[1]);
-		p = atoi(argv[3]);
-		a = (*get_op_func(argv[2]))(i, p);
-		printf("%d\n", a);
-	}
-	else
-	{
-		printf("Error\n");
-		exit(99);
+		case '+':
+		case '-':
+		case '*':
+		case '/':
+		case '%':
+			a = (*get_op_func(argv[2]))(i, p);
+			printf("%d\n", a);
+			break;
+		default:
+			printf("Error\n);
+			exit(99);
 	}
 	return (0);
 }
