@@ -26,11 +26,11 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(98);
 	}
-	
+
 	i = atoi(argv[1]);
 	p = atoi(argv[3]);
 
-	if((argc[2][0] == '/' || argv[2][0] == '%') && p == 0)
+	if ((argc[2][0] == '/' || argv[2][0] == '%') && p == 0)
 	{
 		printf("Error\n");
 		exit(100);
