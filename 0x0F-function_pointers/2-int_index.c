@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "function_pointers.h"
+
 /**
  * int_index - searches an array for a matching interger
  *
@@ -9,20 +9,19 @@
  *
  * Return: index of first element and -1 for no matches / size is 0
  */
-int int_index(int *array, int size, void (*cmp)(int))
+int int_index(int *array, int size, int (*cmp)(int))
 {
-	unsigned int i;
+	int i;
 
 	if (cmp != NULL && array != NULL && size > 0)
 	{
-		return (-1);
-	}
 
-	for (i = 0; i < size; i++)
-	{
-		if (cmp(array[i]) != 0)
+		for (i = 0; i < size; i++)
 		{
-			return (i);
+			if (cmp(array[i]) != 0)
+			{
+				return (i);
+			}
 		}
 	}
 	return (-1);
