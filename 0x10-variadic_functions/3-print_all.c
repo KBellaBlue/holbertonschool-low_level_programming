@@ -63,7 +63,7 @@ void print_all(const char * const format, ...)
 
 	va_list args;
 
-	types t[] = {
+	format_types type[] = {
 		{"c", print_char},
 		{"i", print_int},
 		{"f", print_float},
@@ -80,10 +80,10 @@ void print_all(const char * const format, ...)
 		p = 0;
 		while (p < 4)
 		{
-			if (t[p].t[0] == format[i])
+			if (type[p].t[0] == format[i])
 			{
 				printf("%s", a);
-				t[p].f(args);
+				type[p].p(args);
 				a = ", ";
 				break;
 			}
