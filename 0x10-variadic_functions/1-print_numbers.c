@@ -5,6 +5,7 @@
 /**
  * print_numbers - print all numbers
  *
+ * @separator: the seperating character
  * @n: the numbers
  *
  * Return: sum
