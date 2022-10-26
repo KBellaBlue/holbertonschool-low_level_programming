@@ -14,13 +14,8 @@
  **/
 int main(int argc, char *argv[])
 {
-	int i;
-	int p;
+	int i, p, s;
 	int (*a)(int, int);
-	int s;
-
-	i = 0;
-	p = 0;
 
 	if (argc != 4)
 	{
