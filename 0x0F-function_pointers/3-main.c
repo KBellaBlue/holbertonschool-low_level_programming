@@ -16,7 +16,8 @@ int main(int argc, char *argv[])
 {
 	int i;
 	int p;
-	int a;
+	int (*a)(int, int);
+	int s;
 
 	i = 0;
 	p = 0;
@@ -43,8 +44,14 @@ int main(int argc, char *argv[])
 		case '*':
 		case '/':
 		case '%':
-			a = (*get_op_func(argv[2]))(i, p);
-			printf("%d\n", a);
+			a = get_op_func(argv[2]);
+			if (a == NULL)
+			{
+				printf("Error\n");
+				exit(99);
+			}
+			s = a(i, p);
+			printf("%d\n", s);
 			break;
 		default:
 			printf("Error\n");
