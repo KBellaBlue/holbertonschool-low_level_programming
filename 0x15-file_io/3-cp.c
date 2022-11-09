@@ -36,9 +36,9 @@ int main(int argc, char **argv)
 			error("Error: Can't write to ", argv[2], 99);
 	} while (a == 1024);
 
-	if (close(a))
+	if (close(p))
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", a);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", p);
 		exit(100);
 	}
 	if (close(i))
