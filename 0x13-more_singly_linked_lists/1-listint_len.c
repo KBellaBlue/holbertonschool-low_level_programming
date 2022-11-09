@@ -2,7 +2,7 @@
 #include "lists.h"
 
 /**
- * print_listint - Returns number of element in list
+ * listint_len - Returns number of element in list
  *
  * @h: The list
  *
