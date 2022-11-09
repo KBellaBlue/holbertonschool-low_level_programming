@@ -5,7 +5,6 @@
  * sum_listint - returns the sum of all nodes in list
  *
  * @head: the starting node of the list
-
  *
  * Return: total or 0
  *
