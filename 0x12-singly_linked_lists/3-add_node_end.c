@@ -3,17 +3,17 @@
 #include "lists.h"
 
 /**
- * add_node - adds a new node to the front of list_t
+ * add_node_end - adds a new node to the end of list_t
  *
  * @head: the start of the list
  * @str: the value of the new node
  *
- * Return: new list of NULL
+ * Return: new element in list of NULL
  *
  **/
-list_t *add_node(list_t **head, const char *str)
+list_t *add_node_end(list_t **head, const char *str)
 {
-	list_t *i;
+	list_t *i, *p;
 
 	i = malloc(sizeof(list_t));
 
@@ -24,9 +24,22 @@ list_t *add_node(list_t **head, const char *str)
 
 	i->str = strdup(str);
 	i->len = strlen(str);
-	i->next = *head;
+	i->next = NULL;
 
-	*head = i;
+	p = *head;
 
-	return (*head);
+	if (*head == NULL)
+	{
+		*head = i;
+	}
+	else
+	{
+		while (p->next)
+		{
+			p = p->next;
+		}
+		p->next = i;
+	}
+
+	return (i);
 }
