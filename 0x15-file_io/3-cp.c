@@ -26,8 +26,7 @@ int main(int argc, char **argv)
 	if (p == -1)
 		error("Error: Can't read from file ", argv[1], 98);
 
-	while (a == 1024)
-	{
+	do {
 		s = read(p, buffer, 1024);
 		if (s == -1)
 			error("Error: Can't read from file ", argv[1], 98);
@@ -35,7 +34,7 @@ int main(int argc, char **argv)
 		a = write(i, buffer, s);
 		if (a == -1 || a != s)
 			error("Error: Can't write to ", argv[2], 99);
-	}
+	} while (a == 1024);
 
 	if (close(a))
 	{
