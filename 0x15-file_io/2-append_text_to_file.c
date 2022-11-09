@@ -34,7 +34,7 @@ int append_text_to_file(const char *filename, char *text_content)
 {
 	int i, p, a;
 
-	if (!filename)
+	if (filename == NULL)
 		return (-1);
 
 	i = open(filename, O_RDWR | O_CREAT | O_TRUNC, 0600);
