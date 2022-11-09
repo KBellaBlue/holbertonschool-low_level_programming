@@ -4,7 +4,7 @@
  *
  * @b: A string of 0 and 1 characters (binary number)
  *
- * Retrn: the converted number or 0 if b has numbers higher than 1 or null
+ * Return: the converted number or 0 if b has numbers higher than 1 or null
  *
  **/
 unsigned int binary_to_uint(const char *b)
@@ -30,4 +30,6 @@ unsigned int binary_to_uint(const char *b)
 
 		i--;
 	}
+
+	return (a);
 }
