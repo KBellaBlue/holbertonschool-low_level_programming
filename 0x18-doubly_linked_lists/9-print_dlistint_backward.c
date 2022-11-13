@@ -19,7 +19,7 @@ size_t print_dlistint_backward(const dlistint_t *h)
 		i++;
 	}
 
-	for (p = i; p > 0; p--)
+	for (p = i + 1; p > 0; p--)
 	{
 		printf("%d\n", h->n);
 		h = h->prev;
