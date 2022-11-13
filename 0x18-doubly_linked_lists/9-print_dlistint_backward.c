@@ -20,7 +20,7 @@ size_t print_dlistint_backward(const dlistint_t *h)
 	{
 		h = h->next;
 	}
-	
+
 	i++;
 
 	for (p = i; p > 0; p--)
