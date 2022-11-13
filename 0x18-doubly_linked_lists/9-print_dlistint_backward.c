@@ -11,18 +11,17 @@ size_t print_dlistint_backward(const dlistint_t *h)
 {
 	size_t i, p;
 
-	i = 0;
-
 	if (h == NULL)
 	{
 		return (0);
 	}
 
-	while (h)
+	for (i = 0; h->next != NULL; i++)
 	{
 		h = h->next;
-		i++;
 	}
+	
+	i++;
 
 	for (p = i; p > 0; p--)
 	{
